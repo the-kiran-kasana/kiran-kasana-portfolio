@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+
+:root{
+--bg-1: #071124;
+--bg-2: #05060a;
+--card: rgba(255,255,255,0.04);
+}
+
+
+body{background: radial-gradient(ellipse at top left, rgba(7,17,36,1) 0%, rgba(5,6,10,1) 60%);}
+
+
+/* small utility fallbacks for consistency */
+.bg-card{background-color: var(--card);}
+.shadow-glow{box-shadow: 0 10px 40px rgba(20,184,166,0.18), 0 6px 18px rgba(124,58,237,0.08);}
+.animate-float{animation:float 4s ease-in-out infinite;}
+
+
+
+
+.skill-badge {
+  display: inline-block;
+  padding: 6px;
+
+  /* Rectangle border radius */
+  border-radius: 12px;
+
+  /* Gradient border */
+  border: 3px solid transparent;
+  background:
+    linear-gradient(#04010b, #04010b) padding-box,
+    linear-gradient(to right, #67e8f9, #c084fc) border-box;
+
+  /* Animation */
+  animation: glowZoom 2.5s ease-in-out infinite;
+}
+
+.skill-badge img {
+  height: 100px;
+  width: 150px;
+  border-radius: 8px;
+  display: block;
+}
+
+@keyframes glowZoom {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #67e8f9, 0 0 15px #c084fc;
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 16px #67e8f9, 0 0 34px #c084fc;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #67e8f9, 0 0 15px #c084fc;
+  }
+}
+
+
+.skill-badge {
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+  }
+}
