@@ -33,29 +33,23 @@ export default function Projects({ projects, onOpen }) {
               </div>
 
               {/* Buttons */}
-              <div className="mt-5 flex items-center justify-between">
-                <button
-                  onClick={() => onOpen(i)}
-                  className="px-3 py-2 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600
-                    text-sm font-semibold shadow-lg hover:scale-105 transition"
-                >
-                  Details
-                </button>
+             <div className="mt-5 flex items-center justify-between">
 
-                <div className="flex flex-col items-end px-2 py-1 space-y-1 border border-cyan-300/20">
-                  {p.deploy && (
-                    <a
-                      href={p.deploy}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-xs text-cyan-300 hover:text-purple-300"
-                    >
-                      Live Demo
-                    </a>
-                  )}
+               <button  onClick={() => onOpen(i)} className="px-3 py-2 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-600 text-sm font-semibold shadow-lg hover:scale-105 transition" >
+                 Details
+               </button>
 
-                </div>
-              </div>
+               <div className="flex items-center gap-4">
+
+                 {p.deploy && (
+                   <a href={p.deploy} target="_blank" rel="noreferrer"  className="text-xs text-white hover:text-purple-300 border border-cyan-300/20 px-2 py-1 rounded" >   Live Demo </a>
+                 )}
+
+                 <a href={p.link} target="_blank" rel="noreferrer"  className="text-xs text-white hover:text-purple-300 border border-cyan-300/20 px-2 py-1 rounded">   GitHub </a>
+
+               </div>
+
+             </div>
             </div>
 
           </article>

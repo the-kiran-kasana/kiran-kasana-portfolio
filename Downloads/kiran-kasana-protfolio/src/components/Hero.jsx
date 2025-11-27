@@ -47,7 +47,6 @@ return (
               0 1.57-.02 2.83-.02 3.21 0 .31.21.67.8.56A10.99
               10.99 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
     </svg>
-
     <span>GitHub</span>
   </a>
 
@@ -64,14 +63,22 @@ return (
 
 
 <a
-  href="/KIRAN-KASANA-Resume.pdf"
+//   href="/KIRAN-KASANA-RESUME.pdf"
   target="_blank"
   rel="noopener noreferrer"
+  onClick={(e) => {
+    // Trigger file download
+    const link = document.createElement("a");
+    link.href = "/KIRAN-KASANA-RESUME.pdf";
+    link.download = "KIRAN-KASANA-RESUME.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }}
   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg
     bg-transparent border border-cyan-400/40 text-cyan-300 hover:border-cyan-300 hover:text-cyan-200
     hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all duration-300"
 >
-  {/* Resume Icon */}
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="w-5 h-5"
@@ -81,7 +88,6 @@ return (
     strokeWidth="2"
   >
     <path
-      strokeLinecap="round"
       strokeLinejoin="round"
       d="M12 16l4-4m0 0l-4-4m4 4H4m8 4v1a2 2 0 002 2h6a2 2 0 002-2V7a2 2 0 00-2-2h-3"
     />
@@ -89,6 +95,7 @@ return (
 
   <span>Resume</span>
 </a>
+
 
 
 
