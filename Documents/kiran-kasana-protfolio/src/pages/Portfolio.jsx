@@ -7,7 +7,7 @@ import ProjectModal from '../components/ProjectModal'
 import Experience from '../components/Experience'
 import Education from '../components/Education'
 import Skills from '../components/Skills'
-import GitHub from '../components/GitHub'
+import GitHub from '../components/Github'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
