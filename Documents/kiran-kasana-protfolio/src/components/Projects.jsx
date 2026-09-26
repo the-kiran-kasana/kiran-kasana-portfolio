@@ -5,7 +5,7 @@ export default function Projects({ projects, onOpen }) {
   return (
     <section id="projects" className="relative space-y-14 py-20">
 
-      {/* Decorative glow */}
+
       <div className="pointer-events-none absolute left-1/2 -top-10 -z-10 h-56 w-[32rem] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
 
       <div data-reveal className="text-center space-y-3">
@@ -33,7 +33,7 @@ export default function Projects({ projects, onOpen }) {
                 {String(i + 1).padStart(2, '0')}
               </span>
 
-              {/* Project Thumbnail */}
+
               <div className="relative aspect-[16/10] w-full overflow-hidden">
                 {p.image ? (
                   <img
